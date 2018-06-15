@@ -1,0 +1,17 @@
+.git/
+.idea/
+
+models/
+data/
+board_log/
+MNIST_data/
+tmp/
+
+*.jpg
+*.png
+*.xls
+*.xlsx
+*.txt
+
+
+
