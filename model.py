@@ -194,7 +194,7 @@ class DualBiLSTM():
 
     def test4_matul(self,libs_arrs):
         sess = self.session
-        response_matul_state = np.empty([1,self.lstm_size])
+        response_matul_state = np.empty([1,self.lstm_size*2])
         n = len(libs_arrs[0])
         for i in range(n):
             feed = {self.response_seqs: libs_arrs[0][i].reshape(-1,self.num_steps),
@@ -230,7 +230,7 @@ class DualBiLSTM():
                 self.query_length:input_len.reshape(1),
                 self.response_matul_state: response_matul_state,
                 self.keep_prob: 1.}
-        logits, query_final_state = sess.run([self.logits, self.query_final_state[-1].h, ], feed_dict=feed)
+        logits = sess.run(self.logits, feed_dict=feed)
         n_max = np.max(logits[0])
         max_index = np.where(logits[0] == n_max)
         return max_index[0].tolist()
