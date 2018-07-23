@@ -2,16 +2,17 @@
 .idea/
 
 models/
-data/
+# data/
 board_log/
 MNIST_data/
 tmp/
 
 *.jpg
 *.png
-*.xls
-*.xlsx
+#*.xls
+#*.xlsx
 *.txt
+*.conv
 
 
 
