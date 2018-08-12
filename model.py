@@ -153,7 +153,7 @@ class Model(object):
                         self.response_length: r_len,
                         self.targets: y,
                         self.keep_prob: self.config.train_keep_prob}
-                batch_loss, _ ,diag_targets= sess.run([self.mean_loss, self.optim,self.diag_targets], feed_dict=feed)
+                batch_loss, _ ,diag_targets = sess.run([self.mean_loss, self.optim,self.diag_targets], feed_dict=feed)
                 end = time.time()
 
                 # control the print lines
