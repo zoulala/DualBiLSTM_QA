@@ -9,6 +9,7 @@ Q&amp;A matching model use DualBiLSTM
 
 # training
 用训练数据进行相似度训练，用验证集数据验证保存最优模型
+
 准确度：从标准库中检索出问题的准确性！
 
 > val accuracy:0.76...  best:0.66
